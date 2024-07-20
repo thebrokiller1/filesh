@@ -5,9 +5,10 @@ import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-van
 export function MainInput() {
   const placeholders = [
     "@Lamine-Yamal:EM-2024",
-    "Max-Mustermann:Hochzeit-2021",
-    "Hans-Müller:Urlaub-Karibik",
-    "Ninja:FN-Winstream",
+    "@Max-Mustermann:Hochzeit-2021",
+    "@Hans-Müller:Urlaub-Karibik",
+    "@Ninja:FN-Winstream",
+    "@iShowSpeed:DickPicture"
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
