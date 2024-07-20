@@ -7,8 +7,8 @@ import {
   ModalFooter,
   ModalTrigger,
 } from "@/components/ui/animated-modal";
-import Image from "next/image";
-import { motion } from "framer-motion";
+import { LibraryInput } from "./LibraryInput";
+import { Interface } from "readline";
 
 export function FindLibrary() {
   const images = [
@@ -18,29 +18,32 @@ export function FindLibrary() {
     "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
+  function setOpen(arg0: boolean): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="py-40  flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-            Galerie suchen
+        <ModalTrigger className="text-black bg-amber-500 flex justify-center group/modal-btn mx-3">
+          <span className="group-hover/modal-btn:scale-110 text-center transition duration-500 ">
+            Suchen
           </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-            "!"
-          </div>
+        </ModalTrigger>
+        <ModalTrigger className="text-black bg-yellow-500 flex justify-center group/modal-btn">
+        <span className="group-hover/modal-btn:scale-110 text-center transition duration-500 ">
+            Erstellen
+          </span>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
-            <div className="text-lg black">Searchbar</div>
+            <div className="text-lg text-black">Searchbar</div>
+            <LibraryInput></LibraryInput>
           </ModalContent>
           <ModalFooter className="gap-4">
           <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-              Suchen
-            </button>
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
-              Zurück
-            </button>
-
+            Suchen
+          </button>
           </ModalFooter>
         </ModalBody>
       </Modal>
