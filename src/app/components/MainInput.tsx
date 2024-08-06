@@ -1,14 +1,16 @@
 "use client";
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
-
+import { roboto } from "../ui/fonts";
 export function MainInput() {
   const placeholders = [
+    
+    "@Ehrenamtlicher-Kanalreiniger:Reini",
     "@Lamine-Yamal:EM-2024",
     "@Max-Mustermann:Hochzeit-2021",
     "@Hans-Müller:Urlaub-Karibik",
     "@Ninja:FN-Winstream",
-    "@iShowSpeed:DickPicture"
+    "@iShowSpeed:DickPicture",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,6 +21,7 @@ export function MainInput() {
     console.log("submitted");
   };
   return (
+    <div className={roboto.className}>
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
       <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
         Such nach deiner Bildergalerie:
@@ -28,6 +31,7 @@ export function MainInput() {
         onChange={handleChange}
         onSubmit={onSubmit}
       />
+    </div>
     </div>
   );
 }
